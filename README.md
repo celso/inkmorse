@@ -3,6 +3,8 @@ Ink Morse Component
 
 This is an [Ink][1] based javascript module that plays [Morse Code][2] using WebAudio.
 
+Usage:
+
 ```
 Ink.requireModules(['Ink.Ext.Morse_1'],function( MorseObject ){
     var Morse=new MorseObject;
@@ -17,14 +19,16 @@ Ink.requireModules(['Ink.Ext.Morse_1'],function( MorseObject ){
     Morse.prepare();
     Morse.play("HELLO WORLD");
 }
-
 ```
 
 Here's a [demo][3]
 
 Here's a very good decoder for [iOS][4] too, if you need one.
 
+Want to create your own Ink module? [Try this][5]
+
 [1]: http://ink.sapo.pt
 [2]: http://en.wikipedia.org/wiki/Morse_code
 [3]: http://arrifana.org/inkmorse/
 [4]: https://itunes.apple.com/en/app/morsedecoder/id313071325?mt=8
+[5]: http://ink.sapo.pt/javascript/Ink/#Ink_1-Ink_1-createExt
