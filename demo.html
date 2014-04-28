@@ -128,15 +128,15 @@
 
     <script type="text/javascript">
 
-    Ink.requireModules(['Ink.Util.Date_1','Ink.Dom.Element_1', 'Ink.Dom.Event_1','Ink.Ext.Morse_1'],function( InkDate, Element, Event, MorseObject ){
+    Ink.requireModules(['Ink.Dom.Event_1','Ink.Ext.Morse_1'],function( InkEvent, MorseObject ){
 
         var Morse=new MorseObject;
 
-        Event.observe(Ink.i('message'), 'keyup', function(event) {
+        InkEvent.observe(Ink.i('message'), 'keyup', function(event) {
             Ink.i('message').value=Ink.i('message').value.toUpperCase();
         });
 
-        Event.observe(Ink.i('play'), 'click', function(event) {
+        InkEvent.observe(Ink.i('play'), 'click', function(event) {
             Morse.wpm = Ink.i('wpm').value;
             Morse.freq = Ink.i('freq').value;
             Morse.volume = Ink.i('volume').value;
@@ -156,7 +156,7 @@
             Morse.play(message);
         });
 
-        Event.observe(Ink.i('stop'), 'click', function(event) {
+        InkEvent.observe(Ink.i('stop'), 'click', function(event) {
             Morse.stop();
             Ink.i('notify').innerHTML='Stopped';
         });
