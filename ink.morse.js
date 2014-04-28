@@ -1,4 +1,4 @@
-Ink.createExt('Morse', 1, [], function() {
+Ink.createExt('Morse', 1, ['Ink.Dom.Browser_1'], function( Browser ) {
 
     var Morse = function() {
         this.init();
@@ -183,7 +183,14 @@ Ink.createExt('Morse', 1, [], function() {
                 var node = this.audio.ctx.createBufferSource();
                 node.buffer = sample;
                 node.connect(this.audio.ctx.destination);
-                node.noteOn(timestamp);
+                if(Browser.GECKO) {
+                    node.start(timestamp);
+                }
+                else
+                {
+                    node.noteOn(timestamp);
+                }
+
                 ++this.audio.timeline_pos;
                 // console.log(timestamp, sch_limit);
             }
