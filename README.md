@@ -27,6 +27,8 @@ Here's a very good decoder for [iOS][4] too, if you need one.
 
 Want to create your own Ink module? [Try this][5]
 
+This is module is known to work with modern browsers with WebAudio support, tested with Safari, Firefox and Chrome.
+
 [1]: http://ink.sapo.pt
 [2]: http://en.wikipedia.org/wiki/Morse_code
 [3]: http://arrifana.org/inkmorse/
